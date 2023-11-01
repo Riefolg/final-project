@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans&family=Quicksand:wght@500;700&display=swap');
+
+:root {
+    --main-color: #6fa2ff;
+    --second-color: #f5f5f5;
+
+    --main-font: Open Sans, sans-serif;
+    --heading-font: Quicksand, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Navbar setting */
+
+nav {
+    display: flex;
+    background-color: #8ecddd;   
+    justify-content: space-around;
+    padding: 20px 0;
+    align-items: center;
+    color: var(--second-color);
+    font-family: var(--main-font);
+    position: fixed; /* Tambahkan properti ini untuk membuat navbar tetap di atas */
+    top: 0; /* Posisikan navbar di bagian atas */
+    width: 100%; 
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    width: 40%; /* Sesuaikan dengan kebutuhan Anda */
+    align-items: center;
+    margin: 0; /* Hapus margin yang mungkin mempengaruhi posisi */
+    padding: 0;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+nav ul li a {
+    color: var(--second-color);
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.material-symbols-outlined {
+    color: var(--second-color);
+    cursor: pointer;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.booking-container {
+text-align: center;
+position: relative;
+}
+
+.background-images {
+    margin-top: 70px;
+    position: relative; /* Tambahkan position: relative pada .background-images */
+}
+
+.background-images-mbl {
+    display: none;
+}
+
+.background-images img {
+    height: auto;
+    width: 100%;
+}
+
+.booking-item {
+    display: flex; /* Mengatur .booking-item sebagai flex container */
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%; /* Posisikan di tengah vertikal */
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: var(--second-color);
+    background-color: #8ecddd;
+    padding: 2em;
+    border-radius: 0.5em;
+}
+
+.booking-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    border-right: 0.1em solid #6fa2ff;
+}
+
+.booking-date-btn button {
+    background-color: rgb(247, 247, 247);
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.booking-date-btn button a {
+    color: #8ecddd;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 750;
+}
+
+.booking-date-btn button:hover {    
+    background-color: #ffffff;
+}
+
+.booking-date .date {
+    font-size: 4em;
+}
+
+.content {
+    padding: 5em;
+    display: flex;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.galery-list {
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 5em;
+    margin: 0;
+
+}
+
+.galery-images {
+    flex-direction: column;
+    display: inline-flex;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+    max-height: 800px; /* Set tinggi maksimum ke 800px */
+    overflow-y: auto;
+}
+
+.title-name {
+    font-family: var(--second-color);
+    text-align: center;
+    color: #8ecddd;
+    padding-top: 5em;
+    padding-inline: 5em;
+}
+
+.title-name h1 {
+    font-size: 3em;
+}
+
+.about-container div h2 {
+    color: #8ecddd;
+    font-family: var(--main-font);
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #00eeff;
+}
+
+.about-container div p, ul {
+    font-family: var(--main-font);
+    font-size: 0.9em;
+    padding-top: 1em;
+}
+
+.about-container div ul {
+    padding-left: 1.5em;
+}
+
+.galery-title {
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: #8ecddd;
+    font-family: var(--main-font);
+    padding: 0;
+    margin: 0;
+}
+
+.galery-title p {
+    font-size: 0.8em;
+}
+
+.galery-title h2 {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.room-container {
+    background-color: #8ecddd;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5em 5em 5em;
+    gap: 5em;
+}
+.title {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+.room-list {
+    color: white;
+    font-family: var(--main-font);
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+
+}
+
+.room-list .text h2 {
+    text-decoration: underline;
+}
+
+.room-list .text p {
+    font-size: 0.9em;
+}
+
+.room-list .item {
+    display: flex;
+    gap: 3em;
+}
+
+.room-list .item .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.booking-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.booking-btn button {
+    border: none;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    color: #6fa2ff;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.booking-btn button:hover {
+    background-color: #fff;
+}
+
+.facility-container {
+    display: flex;
+    flex-direction: column;
+    margin: 5em;
+    gap: 5em;
+
+}
+
+.facility-container .title h2 {
+    color: #8ecddd;
+}
+
+.facility-container .item {
+    display: flex;
+    justify-content: space-between;
+    color: #8ecddd;
+}
+
+.facility-container .item .item-list {
+    position: relative;
+    text-align: center;
+}
+
+.facility-container .item .item-list h3 {
+    white-space: nowrap; /* Menghindari pemisahan baris */
+    position: absolute;
+    top: 96%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #8ecddd81;
+    width: 100%;
+    color: white;
+    border-radius: 0 0 0.5em 0.5em;
+    font-family: var(--main-font);
+}
+
+
+.third-party-container {
+    background-color: #8ecddd;
+    display: flex;
+    padding-block: 0.5em;
+}
+
+.third-party-container h3 {
+    color: white;
+    font-family: var(--main-font);
+    display: flex;
+    align-items: center;
+    margin-left: 4em;
+}
+
+.third-party-container .item {
+    width: 50%;
+}
+
+.third-party-container .item .item-list {
+    display: flex;
+    list-style-type: none;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.contact-container {
+    background-color: #4ba9c0;
+    color: white;
+    font-family: var(--main-font);
+    font-size: 0.9em;
+}
+
+.list-item {
+    display: flex;
+    padding-inline: 5em;
+    padding-block: 2em;
+    justify-content: space-between;
+}
+
+.social-icon-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.contact-container p {
+    opacity: 0.7;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    color: var(--second-color);
+    background-color: #8ecddd;
+    padding: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+/* Responsive Breakpoint */
+
+
+/* Ukuran Tablet*/
+@media screen and (max-width: 768px){
+    nav ul {
+        width: 50%;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .booking-item {
+        padding: 1.5em;
+        width: 80%;
+    }
+
+    .item img {
+
+        height: 150px;
+    }
+
+    .background-images {
+        margin-top: 4.5em;
+    }
+
+    .facility-container .item {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2em;
+    }
+
+    .facility-container .item .item-list img{
+        width: 100%;
+        height: auto;
+    }
+
+    .third-party-container {
+        gap: 2em;
+    }
+
+    .third-party-container .item {
+        width: 100%;
+        margin-right: 3em;
+    }
+    .third-party-container .item .item-list img {
+        width: 80%;
+        height: auto;
+    }
+
+    
+    .third-party-container h3 {
+        font-size: 1em;
+        white-space: nowrap;
+    }
+
+    .contact-container {
+        font-size: 0.7em;
+    }
+
+    .list-item {
+        padding-inline: 6em;
+    }
+
+}
+
+
+
+
+/* Ukuran Mobile*/
+@media screen and (max-width: 576px){
+
+    .background-images-mbl {
+        display: inline;
+    }
+
+    .background-images {
+        display: none;
+    }
+
+
+
+    .booking-date p.date {
+        font-size: 2.5em;
+    }
+
+    .booking-container {
+        margin-top: 4em;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        background-color: #8ecddd;
+        height: 100vh;
+        top: 0;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 1;
+        width: 80%;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 3;
+    }
+
+    .slide {
+        transform: translateX(0);
+
+    }
+
+    span.close {
+        display: none;
+    }
+
+    span.menu {
+        display: none;
+    }
+
+
+    .background-images img {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .booking-item {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 50%; /* Posisikan di tengah vertikal */
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        color: var(--second-color);
+        background-color: #8ecddd;
+        width: 30%;
+        height: auto;
+        border-radius: 0.5em;
+        justify-content: space-between;
+        gap: 1.6em;
+    }
+
+    .booking-date {
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        border-right: none;
+        border-bottom: 0.1em solid #fff;
+
+    }
+
+    .booking-date .date {
+        font-size: em;
+    }
+
+    .title-name h1 {
+        font-size: 2.5em;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 10em;
+    }
+
+    .galery-list {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding-left: 0px;
+        border-top: 0.1em solid #00eeff;
+        padding-top: 1em;
+    }
+
+    .room-list .item {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .room-list {
+        gap: 5em;
+    }
+
+    .item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .facility-container {
+        gap: 2em;
+        margin: 0;
+        margin-block: 5em;
+        width: 100%;
+    }
+
+    .facility-container .item {
+        justify-content: center;
+        flex-direction: row;
+        gap: 1em;
+        margin: 0;
+        height: auto;
+    }
+
+    .facility-container .item .item-list {
+        width: 40%;
+    }
+
+    .facility-container .item .item-list img{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .facility-container .item .item-list h3 {
+        top: 96%;
+        width: 100%;
+    }
+
+    .third-party-container {
+        gap: 1em;
+    }
+
+    .third-party-container .item {
+        width: 100%;
+        margin-right: 2em;
+        align-items: flex-start;
+    }
+
+    .third-party-container .item .item-list img {
+        width: 80%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .third-party-container h3 {
+        font-size: 0.9em;
+        margin-left: 3em;
+        white-space: nowrap;
+    }
+
+    .contact-container {
+        font-size: 1em;
+    }
+
+    .list-item {
+        padding-inline: 4em;
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+
+}
